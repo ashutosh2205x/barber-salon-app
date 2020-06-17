@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "assignment",
-    "slug": "assignment",
+    "name": "Salon App",
+    "slug": "salon-app",
     "platforms": [
       "ios",
       "android",
@@ -23,6 +23,8 @@
     ],
     "ios": {
       "supportsTablet": true
-    }
+    },
+    "description": "A sample app",
+    "githubUrl": "https://github.com/ashutosh2205x/barber-salon-app"
   }
 }

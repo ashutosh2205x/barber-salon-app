@@ -12,12 +12,14 @@ export default function MapScreen(props) {
       longitude: 22.764351,
     },
   };
+  let item_details = props.navigation.getParam("b_details");
+
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(
       (pos) => {
         let distance = getPreciseDistance(
           { latitude: pos.coords.latitude, longitude: pos.coords.longitude },
-          { latitude: 75.891151, longitude: 22.764351 }
+          { latitude: item_details.coords.lat, longitude: item_details.coords.long }
         );
          (dist = (distance / 1000).toFixed(2) + " KM");
         console.log("distance", dist);
@@ -28,7 +30,6 @@ export default function MapScreen(props) {
     );
   }, []);
 
-  let item_details = props.navigation.getParam("b_details");
 
   console.log(item_details);
   return (
